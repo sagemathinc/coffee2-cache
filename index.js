@@ -30,7 +30,7 @@ var logCouldNotWriteCache = function() {
     "coffee-cache: Could not write cache at " + cacheDir + ".\n"
   );
   logCouldNotWriteCache = function(){};
-}
+};
 
 // Compile a file as you would with require and return the contents
 function cacheFile(filename) {
@@ -68,7 +68,7 @@ function cacheFile(filename) {
       if (mapPath)
         fs.writeFileSync(mapPath, compiled.v3SourceMap, 'utf8');
     } catch (err) {
-      logCouldNotWriteCache()
+      logCouldNotWriteCache();
     }
   }
 
